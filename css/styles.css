@@ -27,12 +27,20 @@ background-color: #fff;
 color: #434455;
 }
 .container {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto; 
-    margin-right: auto; 
+    max-width: 320px;
+    padding: 0 16px;
+    margin: 0 auto; 
 }
+@media screen and (min-width: 768px) {
+    .container {max-width: 768px;}
+}
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }  
+}
+    
 /*============ /Common styles============= */
 
 /* ===========Page header styles========== */
@@ -50,8 +58,8 @@ color: #434455;
     align-items: center;
 }
 .menu {
-    display: flex;
-    gap: 40px;
+    display: none;
+ 
 }
 .menu>:last-child {
     margin-right: 0;
@@ -65,6 +73,7 @@ color: #434455;
     text-transform: uppercase;
     color: #4d5ae5;
     margin-right: 76px;
+    padding: 17px 0;
 }
 .web-text {
     color: #2e2f42;
@@ -110,7 +119,9 @@ color: #434455;
     margin-right: 0;
 }
 .contact-menu {
-    font-style: normal
+    font-style: normal;
+    margin-left: auto;
+    display: none;
 }
 .contact-link {
     font-style: normal;
